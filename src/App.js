@@ -3,6 +3,20 @@ import './App.css';
 import TodoForm from "./Components/TodoForm";
 import TodoList from "./Components/TodoList";
 import Typography from "@material-ui/core/Typography";
+import Particles from 'react-particles-js';
+
+const particlesOptions = {
+  particles: {
+      number: {
+        value: 30,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      }
+    }
+  }
+
 
 const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 
@@ -44,8 +58,11 @@ useEffect(() => {
 
   return (
     <div className="App">
+      <Particles className='particles'
+   params={{particlesOptions}}
+          />
       <Typography style={{ padding: 16 }} variant="h1">
-        React Todo
+        What is your main focus today?
       </Typography>
       <TodoForm addTodo={addTodo} />
       <TodoList
