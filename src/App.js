@@ -54,8 +54,7 @@ useEffect(() => {
 
   function removeTodo(id) {
     setTodos(todos.filter(todo => todo.id !== id));
-  }
-
+  } 
   return (
     <div className="App">
       <Particles className='particles'
